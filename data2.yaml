@@ -1,0 +1,5 @@
+train: ../yolov5/train2/images
+val: ../yolov5/valid2/images
+
+nc: 2
+names: ['mask', 'no-mask']

@@ -1,0 +1,6 @@
+
+conda activate yolov53
+cd yolov53/yolov531/yolov5
+sudo chmod 777 /dev/ttyUSB1
+
+python detect_test.py --weights Mask0713.pt --source 0 --img-size 480 --conf 0.85
