@@ -10,40 +10,40 @@ And This repository made for main software of Mask Detection and Tempature Scann
 
 ----------------------------------
 
-Environment
+## Environment
 
-Jetson Nano with Jetpack v4.5.1 
-Anaconda
-YOLOv5 v3.1 
-Python v3.6
+- Jetson Nano with Jetpack v4.5.1 
+- Anaconda
+- YOLOv5 v3.1 
+- Python v3.6
 --------------------------------
 
-Modules For Mask Detection
+## Modules For Mask Detection
 
-Cython==0.29.23
-future==0.18.2
-matplotlib==3.2.2
-numpy==1.19.3
-opencv-python==4.5.1.48
-pandas==1.1.5
-Pillow==8.2.0
-PyYAML==5.4.1
-scikit-build==0.11.1
-scipy==1.5.4
-seaborn==0.11.1
-tensorboard==2.5.0
-tensorboard-data-server==0.6.1
-tensorboard-plugin-wit==1.8.0
-torch @ torch-1.8.0-cp36-cp36m-linux_aarch64.whl
-torchvision==0.9.0a0+01dfa8e
-tqdm==4.60.0
+- Cython==0.29.23
+- future==0.18.2
+- matplotlib==3.2.2
+- numpy==1.19.3
+- opencv-python==4.5.1.48
+- pandas==1.1.5
+- Pillow==8.2.0
+- PyYAML==5.4.1
+- scikit-build==0.11.1
+- scipy==1.5.4
+- seaborn==0.11.1
+- tensorboard==2.5.0
+- tensorboard-data-server==0.6.1
+- tensorboard-plugin-wit==1.8.0
+- torch @ torch-1.8.0-cp36-cp36m-linux_aarch64.whl
+- torchvision==0.9.0a0+01dfa8e
+- tqdm==4.60.0
 -----------------------------------
 
-Modules For Tempature Scanning
+## Modules For Tempature Scanning
 
-pyserial==3.5
-serial==0.0.97
-websockets==9.0.2
+- pyserial==3.5
+- serial==0.0.97
+- websockets==9.0.2
 -------------------------------------
 
 
