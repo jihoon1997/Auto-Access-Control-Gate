@@ -15,7 +15,7 @@ And This repository made for main software of Mask Detection and Tempature Scann
 - Jetson Nano with Jetpack v4.5.1 
 - Anaconda
 - YOLOv5 v3.1 
-- Python v3.6
+- Python v3.6.13
 --------------------------------
 
 ## Modules For Mask Detection
@@ -46,7 +46,24 @@ And This repository made for main software of Mask Detection and Tempature Scann
 - websockets==9.0.2
 -------------------------------------
 
+## How To Consist Environment Of YOLOv5 In Jetson Nano
 
+- 1. 젯슨 나노에 제트팩 v4.5.1를 설치한다.
+- 2. Anaconda를 설치해 Python v3.6.13 기반 가상환경을 구성한다.
+- 
+- 3. torch-1.8.0-cp36-cp36m-linux_aarch64.whl 를 설치한다.
+- wget https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl
+- cp p57jwntv436lfrd78inwl7iml6p13fzh.whl torch-1.8.0-cp36-cp36m-linux_aarch64.whl
+- pip3 install torch-1.8.0-cp36-cp36m-linux_aarch64.whl
+
+- 4. torchvision 0.9.0a0+01dfa8e를 설치한다.
+- git clone https://github.com/pytorch/vision torchvision -b v0.9.0
+
+- 5. aarch64에서 호환되는 YOLOv5 v3.1을 설치한다.
+- git clone https://github.com/ultralytics/yolov5 -b v3.1
+- git checkout v3.1
+
+- 6. 
 
 
 
