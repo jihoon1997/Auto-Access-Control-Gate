@@ -66,43 +66,47 @@ torch 설치 후 import torch를 인터프리터 하거나 컴파일 할 경우 
 - 4 pip install numpy==1.19.4 를 설치한다.
 
 - 5 YOLOv5 환경을 구성할 directory를 생성한다.
+
 mkdir your_own_dir_name
 cd dir (home/dir)
 
 - 6 torch-1.8.0-cp36-cp36m-linux_aarch64.whl 를 설치한다.
+
 wget https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl
-- cp p57jwntv436lfrd78inwl7iml6p13fzh.whl torch-1.8.0-cp36-cp36m-linux_aarch64.whl
-- pip3 install torch-1.8.0-cp36-cp36m-linux_aarch64.whl
-- python 실행 후 import torch를 했을 때 Illegal instruction (core dumped) 오류가 발생하지 않았다면 성공.
-- 이 후 torch.cuda.is_available() 을 했을 때 True가 뜬다면 정상이고, False가 뜰 경우 torch 설치 시 torch-1.8.0-cp36-cp36m-linux_aarch64.whl 를 맞게 설치했는지 점검한다.
+cp p57jwntv436lfrd78inwl7iml6p13fzh.whl torch-1.8.0-cp36-cp36m-linux_aarch64.whl
+pip3 install torch-1.8.0-cp36-cp36m-linux_aarch64.whl
+python 실행 후 import torch를 했을 때 Illegal instruction (core dumped) 오류가 발생하지 않았다면 성공.
+이 후 torch.cuda.is_available() 을 했을 때 True가 뜬다면 정상이고, False가 뜰 경우 torch 설치 시 torch-1.8.0-cp36-cp36m-linux_aarch64.whl 를 맞게 설치했는지 점검한다.
 
 - 7 torchvision 0.9.0a0+01dfa8e를 설치한다.
-- git clone https://github.com/pytorch/vision torchvision -b v0.9.0
-- cd torchvision (home/dir/torchvision)
-- python3 setup.py install (오래 걸림 약 30분)
-- 이 부분에서 Illegal instruction (core dumped) 오류가 발생했다면 numpy 버전이 1.19.4인지 확인하자.
+
+git clone https://github.com/pytorch/vision torchvision -b v0.9.0
+cd torchvision (home/dir/torchvision)
+python3 setup.py install (오래 걸림 약 30분)
+이 부분에서 Illegal instruction (core dumped) 오류가 발생했다면 numpy 버전이 1.19.4인지 확인하자.
 
 - 8 aarch64에서 호환되는 YOLOv5 v3.1을 설치한다.
-- cd dir
-- git clone https://github.com/ultralytics/yolov5 -b v3.1
-- cd yolov5 (home/dir/yolov5)
-- git checkout v3.1
+
+cd dir
+git clone https://github.com/ultralytics/yolov5 -b v3.1
+cd yolov5 (home/dir/yolov5)
+git checkout v3.1
 
 - 9 이제 YOLOv5의 환경 설정을 해줄 차례이다.
-- sudo nano requirements.txt 를 통해 나노 편집기에서 requirements.text에 access 한다.
-- numpy>=1.18.5 삭제
-- torch>=1.6.0 삭제
-- torchvision>=0.7.0 삭제
-- opencv-python>=4.1.2 에서 opencv-python==4.5.1.48 수정
-- pandas==1.1.5 추가
-- extras의 # thop에서 #를 삭제 (train시에 thop 모듈을 사용해야하므로 주석처리를 해제한다.)
+
+sudo nano requirements.txt 를 통해 나노 편집기에서 requirements.text에 access 한다.
+numpy>=1.18.5 삭제
+torch>=1.6.0 삭제
+torchvision>=0.7.0 삭제
+opencv-python>=4.1.2 에서 opencv-python==4.5.1.48 수정
+pandas==1.1.5 추가
+extras의 # thop에서 #를 삭제 (train시에 thop 모듈을 사용해야하므로 주석처리를 해제한다.)
 
 - 10 pip install -r requirements.txt를 통해 하위 모듈을 설치한다. (오래 걸림 약 10분)
 
+
 - 11 yolov5 디렉토리에서 python detect.py를 통해 기본 예제를 실행할 수 있다.
 
-
-- detect 사용법 / train 방법 예정
 
 
 
