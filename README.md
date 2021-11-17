@@ -48,14 +48,14 @@ And This repository made for main software of Mask Detection and Tempature Scann
 
 ## How To Consist Environment Of YOLOv5 In Jetson Nano
 
-- 젯슨 나노에 일반적인 pip (v21.1.1)으로 torch와 torchvision을 설치시 manylinux2014_aarch64.whl 기반으로 설치된다.
-- 이 버전은 젯슨 나노의 운영체제에 호환되지 않는다. (정확히는 CUDA, 즉 Jetson Nano의 GPU를 사용할 수 없다.)
-- torch 설치 후 import torch를 인터프리터 하거나 컴파일 할 경우 Illegal instruction (core dumped) 라는 오류와 함께 프로세스가 강제 종료되는 오류가 있다.
-- 이 문제는 파이썬 3.6.13에 기본적으로 포함된 numpy의 버전이 1.19.5 이상이며 운영체제에 호환되지 않기 때문에 발생하는 문제이므로, numpy==1.19.4를 설치해야한다.
+젯슨 나노에 일반적인 pip (v21.1.1)으로 torch와 torchvision을 설치시 manylinux2014_aarch64.whl 기반으로 설치된다.
+이 버전은 젯슨 나노의 운영체제에 호환되지 않는다. (정확히는 CUDA, 즉 Jetson Nano의 GPU를 사용할 수 없다.)
+torch 설치 후 import torch를 인터프리터 하거나 컴파일 할 경우 Illegal instruction (core dumped) 라는 오류와 함께 프로세스가 강제 종료되는 오류가 있다.
+이 문제는 파이썬 3.6.13에 기본적으로 포함된 numpy의 버전이 1.19.5 이상이며 운영체제에 호환되지 않기 때문에 발생하는 문제이므로, numpy==1.19.4를 설치해야한다.
 
-- 해당 문제를 해결하기 위해 젯슨 나노의 운영체제에 맞는 torch와 torchvision을 설치해야한다.
-- 또한 해당 torch와 torchvision 버전에 호환되는 YOLOv5 및 하위 모듈을 찾아 설치해야한다.
-- 다음 과정을 주의깊게 따라하자.
+해당 문제를 해결하기 위해 젯슨 나노의 운영체제에 맞는 torch와 torchvision을 설치해야한다.
+또한 해당 torch와 torchvision 버전에 호환되는 YOLOv5 및 하위 모듈을 찾아 설치해야한다.
+다음 과정을 주의깊게 따라하자.
 
 - 1 젯슨 나노에 제트팩 v4.5.1를 설치한다.
 
@@ -66,11 +66,11 @@ And This repository made for main software of Mask Detection and Tempature Scann
 - 4 pip install numpy==1.19.4 를 설치한다.
 
 - 5 YOLOv5 환경을 구성할 directory를 생성한다.
-- mkdir your_own_dir_name
-- cd dir (home/dir)
+mkdir your_own_dir_name
+cd dir (home/dir)
 
 - 6 torch-1.8.0-cp36-cp36m-linux_aarch64.whl 를 설치한다.
-- wget https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl
+wget https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl
 - cp p57jwntv436lfrd78inwl7iml6p13fzh.whl torch-1.8.0-cp36-cp36m-linux_aarch64.whl
 - pip3 install torch-1.8.0-cp36-cp36m-linux_aarch64.whl
 - python 실행 후 import torch를 했을 때 Illegal instruction (core dumped) 오류가 발생하지 않았다면 성공.
